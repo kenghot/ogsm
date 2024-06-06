@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_ggg_lov_group" model="ir.ui.view">
+        <field name="name">ggg.lov.group.tree</field>
+        <field name="model">ggg.lov.group</field>
+        <field name="arch" type="xml">
+            <tree string="LOV Group Code" editable="top">
+                <field name="name" required="1"/>
+                <field name="group_code" required="1"/>
+            </tree>
+        </field>
+    </record>
+    <record id="action_lov_group" model="ir.actions.act_window">
+        <field name="name">GGG LOV Group Action GGG</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ggg.lov.group</field>
+        <field name="view_mode">tree</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                LOV Group
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_lov_group" name="LOV Group" parent="configuration_root" action="action_lov_group" sequence="10"/>
+
+    <record id="view_ggg_lov" model="ir.ui.view">
+        <field name="name">ggg.lov.tree</field>
+        <field name="model">ggg.lov</field>
+        <field name="arch" type="xml">
+            <tree string="LOV Group Code" editable="top">
+                <field name="id"/>
+                <field name="name" required="1"/>
+                <field name="code" required="1"/>
+                <field name="group" required="1"/>
+                <field name="parent"/>
+                <field name="isActive" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_lov" model="ir.actions.act_window">
+        <field name="name">GGG List of value Action GGG</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ggg.lov</field>
+        <field name="view_mode">tree</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                LOV Group
+            </p>
+        </field>
+    </record>
+    <menuitem id="menu_lov" name="List of Value" parent="configuration_root" action="action_lov" sequence="10"/>
+
+</odoo>

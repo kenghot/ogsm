@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="ggg_view_partner_form_extend">
+            <field name="name">Partner Extend View</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='country_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='city']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='state_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='zip']" position="before">
+                    <group>
+                        <field name="province" domain="[('group.group_code','=','province'),('isActive','=',True)]" />
+                        <field name="district" domain="[('parent','=',province),('group.group_code','=','district'),('isActive','=',True)]" />
+                        <field name="sub_district" domain="[('parent','=',district),('group.group_code','=','sub_district'),('isActive','=',True)]" />
+                    </group>
+
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="ggg_view_partner_form_private_extend">
+            <field name="name">Partner Extend View</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_view_form_private" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='country_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='city']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='state_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='zip']" position="before">
+                    <group>
+                        <field name="province" domain="[('group.group_code','=','province'),('isActive','=',True)]" />
+                        <field name="district" domain="[('parent','=',province),('group.group_code','=','district'),('isActive','=',True)]" />
+                        <field name="sub_district" domain="[('parent','=',district),('group.group_code','=','sub_district'),('isActive','=',True)]" />
+                    </group>
+
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo> 

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ogsm_objective_user,ogsm.objective.user,model_ogsm_objective,base.group_user,1,1,1,1
+access_ogsm_objective_manager,ogsm.objective.manager,model_ogsm_objective,base.group_system,1,1,1,1
+access_ogsm_division_user,ogsm.division.user,model_ogsm_division,base.group_user,1,1,1,1
+access_ogsm_division_manager,ogsm.division.manager,model_ogsm_division,base.group_system,1,1,1,1

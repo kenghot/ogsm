@@ -1,0 +1,48 @@
+<odoo>
+    <!-- Form view -->
+    <record id="view_division_form" model="ir.ui.view">
+        <field name="name">ogsm.division.form</field>
+        <field name="model">ogsm.division</field>
+        <field name="arch" type="xml">
+            <form string="Division">
+                <sheet>
+                    <group>
+                        <field name="code"/>
+                        <field name="name"/>
+                        <!-- <field name="user_ids" widget="many2many_tags"/> -->
+                    </group>
+                    <group>
+                        <field name="user_ids" widget="many2many_grid">
+                            <tree>
+                                <field name="name"/>
+                                <field name="full_name"/>
+                                <field name="email"/>
+                            </tree>
+                        </field>
+                    </group>                    
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree view -->
+    <record id="view_division_tree" model="ir.ui.view">
+        <field name="name">ogsm.division.tree</field>
+        <field name="model">ogsm.division</field>
+        <field name="arch" type="xml">
+            <tree string="Division">
+                <field name="code"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_division" model="ir.actions.act_window">
+        <field name="name">Divisions</field>
+        <field name="res_model">ogsm.division</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+  
+</odoo>

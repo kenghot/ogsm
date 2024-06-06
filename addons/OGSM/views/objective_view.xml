@@ -1,0 +1,44 @@
+<odoo>
+    <!-- Form view -->
+    <record id="view_objective_form" model="ir.ui.view">
+        <field name="name">ogsm.objective.form</field>
+        <field name="model">ogsm.objective</field>
+        <field name="arch" type="xml">
+            <form string="Objective">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="target_date"/>
+                        <field name="achieved"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Tree view -->
+    <record id="view_objective_tree" model="ir.ui.view">
+        <field name="name">ogsm.objective.tree</field>
+        <field name="model">ogsm.objective</field>
+        <field name="arch" type="xml">
+            <tree string="Objective">
+                <field name="name"/>
+                <field name="target_date"/>
+                <field name="achieved"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_objective" model="ir.actions.act_window">
+        <field name="name">Objectives</field>
+        <field name="res_model">ogsm.objective</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <!-- <menuitem id="menu_ogsm_root" name="OGSM"/>
+    <menuitem id="menu_master" name="Master" parent="menu_ogsm_root" action="action_objective"/>
+    <menuitem id="menu_objective" name="Objectives" parent="menu_master" action="action_objective"/> -->
+</odoo>

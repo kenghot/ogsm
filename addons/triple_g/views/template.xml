@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend_ext" inherit_id="web.assets_backend" name="Backend Assets (used in backend interface)">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/triple_g/static/src/js/buddhist_calendar.js"></script>
+        </xpath>
+        
+    </template>
+</odoo> 

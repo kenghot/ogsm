@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- ggg.lov.group -->
+        <record id="lovgroup_province" model="ggg.lov.group">
+            <field name="name">province</field>
+            <field name="group_code">province</field>
+        </record>
+        <record id="lovgroup_day" model="ggg.lov.group">
+            <field name="name">day</field>
+            <field name="group_code">day</field>
+        </record>
+        <record id="lovgroup_month" model="ggg.lov.group">
+            <field name="name">month</field>
+            <field name="group_code">month</field>
+        </record>
+        <record id="lovgroup_district" model="ggg.lov.group">
+            <field name="name">district</field>
+            <field name="group_code">district</field>
+        </record>
+        <record id="lovgroup_subdistrict" model="ggg.lov.group">
+            <field name="name">subdistrict</field>
+            <field name="group_code">sub_district</field>
+        </record>
+        <record id="lovgroup_interface" model="ggg.lov.group">
+            <field name="name">interface code</field>
+            <field name="group_code">interface</field>
+        </record>
+        <record id="lovgroup_religion" model="ggg.lov.group">
+            <field name="name">religion code</field>
+            <field name="group_code">religion</field>
+        </record>        
+        <!-- ggg.lov -->
+        <!-- religion -->
+        <record id="lovgroup_religion_01" model="ggg.lov">
+            <field name="name">พุทธ</field>
+            <field name="code">buddhism</field>
+            <field name="group" ref="lovgroup_religion"></field>
+        </record>   
+        <record id="lovgroup_religion_02" model="ggg.lov">
+            <field name="name">คริส</field>
+            <field name="code">christianity</field>
+            <field name="group" ref="lovgroup_religion"></field>
+        </record>   
+        <record id="lovgroup_religion_03" model="ggg.lov">
+            <field name="name">อิสราม</field>
+            <field name="code">islam</field>
+            <field name="group" ref="lovgroup_religion"></field>
+        </record>   
+        <record id="lovgroup_religion_04" model="ggg.lov">
+            <field name="name">ฮินดู</field>
+            <field name="code">hinduism</field>
+            <field name="group" ref="lovgroup_religion"></field>
+        </record>   
+        <record id="lovgroup_religion_05" model="ggg.lov">
+            <field name="name">อื่นๆ</field>
+            <field name="code">other</field>
+            <field name="group" ref="lovgroup_religion"></field>
+        </record>   
+
+        <!-- interface -->
+        <record id="lovgroup_interface_01" model="ggg.lov">
+            <field name="name">ตั้งหนี้ระบบเงินกู้</field>
+            <field name="code">INV_LOAN</field>
+            <field name="group" ref="lovgroup_interface"></field>
+        </record>
+        <record id="lovgroup_interface_PAY_LOAN_CASH" model="ggg.lov">
+            <field name="name">ชำระเงินกู้ด้วยเงินสด</field>
+            <field name="code">PAY_LOAN_CASH</field>
+            <field name="group" ref="lovgroup_interface"></field>
+        </record>
+        <record id="lovgroup_interface_PAY_LOAN_CHECK" model="ggg.lov">
+            <field name="name">ชำระเงินกู้ด้วยเช็ค</field>
+            <field name="code">PAY_LOAN_CHECK</field>
+            <field name="group" ref="lovgroup_interface"></field>
+        </record>
+        <record id="lovgroup_interface_PAY_LOAN_TRANS" model="ggg.lov">
+            <field name="name">ชำระเงินกู้ด้วยการโอน</field>
+            <field name="code">PAY_LOAN_TRANS</field>
+            <field name="group" ref="lovgroup_interface"></field>
+        </record>
+        <record id="lovgroup_interface_PAY_LOAN_ORDER" model="ggg.lov">
+            <field name="name">ชำระเงินกู้ด้วยธนาณัติ</field>
+            <field name="code">PAY_LOAN_ORDER</field>
+            <field name="group" ref="lovgroup_interface"></field>
+        </record>
+        <record id="lovgroup_interface_PAY_LOAN_CS" model="ggg.lov">
+            <field name="name">ชำระเงินกู้ที่ Counter Service</field>
+            <field name="code">PAY_LOAN_CS</field>
+            <field name="group" ref="lovgroup_interface"></field>
+        </record>     
+        <record id="lovgroup_interface_PAY_LOAN_CS_HQ" model="ggg.lov">
+            <field name="name">ชำระเงินกู้ที่ Counter Service ส่วนกลาง</field>
+            <field name="code">PAY_LOAN_CS_HQ</field>
+            <field name="group" ref="lovgroup_interface"></field>
+        </record>            
+        <record id="01" model="ggg.lov">
+            <field name="name">มกราคม</field>
+            <field name="code">01</field>
+            <field name="group" ref="lovgroup_month"></field>
+        </record>
+        <record id="02" model="ggg.lov">
+            <field name="name">กุมภาพันธ์</field>
+            <field name="code">02</field>
+            <field name="group" ref="lovgroup_month"></field>
+        </record>
+        <record id="03" model="ggg.lov">
+            <field name="name">มีนาคม</field>
+            <field name="code">03</field>
+            <field name="group" ref="lovgroup_month"></field>
+        </record>
+        <record id="04" model="ggg.lov">
+            <field name="name">เมษายน</field>
+            <field name="code">04</field>
+            <field name="group" ref="lovgroup_month"></field>
+        </record>
+        <record id="05" model="ggg.lov">
+            <field name="name">พฤษภาคม</field>
+            <field name="code">05</field>
+            <field name="group" ref="lovgroup_month"></field>
+        </record>
+        <record id="06" model="ggg.lov">
+            <field name="name">มิถุนายน</field>
+            <field name="code">06</field>
+            <field name="group" ref="lovgroup_month"></field>
+        </record>
+        <record id="07" model="ggg.lov">
+            <field name="name">กรกฎาคม</field>
+            <field name="code">07</field>
+            <field name="group" ref="lovgroup_month"></field>
+        </record>
+        <record id="08" model="ggg.lov">
+            <field name="name">สิงหาคม</field>
+            <field name="code">08</field>
+            <field name="group" ref="lovgroup_month"></field>
+        </record>
+        <record id="09" model="ggg.lov">
+            <field name="name">กันยายน</field>
+            <field name="code">09</field>
+            <field name="group" ref="lovgroup_month"></field>
+        </record>
+        <record id="10" model="ggg.lov">
+            <field name="name">ตุลาคม</field>
+            <field name="code">10</field>
+            <field name="group" ref="lovgroup_month"></field>
+        </record>
+        <record id="11" model="ggg.lov">
+            <field name="name">พฤศจิกายน</field>
+            <field name="code">11</field>
+            <field name="group" ref="lovgroup_month"></field>
+        </record>
+        <record id="12" model="ggg.lov">
+            <field name="name">ธันวาคม</field>
+            <field name="code">12</field>
+            <field name="group" ref="lovgroup_month"></field>
+        </record>
+
+    </data>
+</odoo>

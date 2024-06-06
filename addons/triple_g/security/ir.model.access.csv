@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ggg_lov,access.ggg.lov,model_ggg_lov,,1,1,1,1
+access_ggg_lov_group,access.ggg.lov.group,model_ggg_lov_group,,1,1,1,1

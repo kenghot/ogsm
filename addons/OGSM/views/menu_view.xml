@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Master Menu -->
+    <menuitem id="menu_ogsm_root" name="OGSM"/>
+    <menuitem id="menu_master" name="Master" parent="menu_ogsm_root" action="action_objective"/>
+    <menuitem id="menu_objective" name="Objectives" parent="menu_master" action="action_objective"/>
+    <menuitem id="menu_division" name="Divisions" parent="menu_master" action="action_division"/>
+    <!-- <menuitem id="menu_ogsm_root" name="OGSM" sequence="1"/> -->
+
+    <!-- Menu -->
+    <!-- <menuitem id="menu_master" name="Master" parent="menu_ogsm_root" action="action_objective" />
+    <menuitem id="menu_objective" name="Objectives" parent="menu_master" action="action_objective"/> -->
+
+    
+    <!-- Objective Menu -->
+    <!-- <record id="action_objective" model="ir.actions.act_window">
+        <field name="name">Objectives</field>
+        <field name="res_model">ogsm.objective</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_objective" name="Objectives" parent="menu_master_root" action="action_objective"/> -->
+
+    <!-- Division Menu -->
+    <!-- <record id="action_division" model="ir.actions.act_window">
+        <field name="name">Divisions</field>
+        <field name="res_model">ogsm.division</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_division" name="Divisions" parent="menu_master_root" action="action_division"/> -->
+</odoo>
